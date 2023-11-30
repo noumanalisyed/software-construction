@@ -2,10 +2,7 @@ package com.example.registrationfx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Window;
 
 import java.sql.SQLException;
@@ -26,6 +23,8 @@ public class RegisterController {
 
     @FXML
     private Button cancelButton;
+    @FXML
+    private MenuItem menuNewRegistration;
 
     @FXML
     public void register(ActionEvent event) throws SQLException {
@@ -75,6 +74,6 @@ public class RegisterController {
 
     public void cancel(ActionEvent actionEvent) {
         Window owner = cancelButton.getScene().getWindow();
-        System.exit(0);
+        this.cancel(actionEvent);
     }
 }

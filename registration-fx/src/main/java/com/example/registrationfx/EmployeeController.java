@@ -2,15 +2,16 @@ package com.example.registrationfx;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Window;
 
+import java.net.URL;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class EmployeeController {
+public class EmployeeController implements Initializable {
 
     @FXML
     private TextField fullNameField;
@@ -26,7 +27,19 @@ public class EmployeeController {
 
     @FXML
     private Button cancelButton;
+    @FXML
+    private GridPane gridPaneUI;
+    @FXML
+    private ComboBox genderComboBox;
 
+    String genderData [] = {"Male","Female"};
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+      loadData();
+    }
+    public void loadData(){
+        genderComboBox.getItems().addAll(genderData);
+    }
     @FXML
     public void register(ActionEvent event) throws SQLException {
 
@@ -75,6 +88,6 @@ public class EmployeeController {
 
     public void cancel(ActionEvent actionEvent) {
         Window owner = cancelButton.getScene().getWindow();
-        System.exit(0);
+
     }
 }

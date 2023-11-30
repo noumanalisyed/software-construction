@@ -2,8 +2,10 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/JavaFX-MySQL" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/JavaFX-with-Spring-Boot" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/javaFx-Spring" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/javafx-mysql-crud" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/javafx-spring-jdbc" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/javafx-springboot" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/registration-fx" vcs="Git" />
